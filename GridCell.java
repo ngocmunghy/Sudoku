@@ -50,7 +50,7 @@ public class GridCell extends JTextField  {
         public void insertString( int offset, String  str, AttributeSet attr ) throws BadLocationException {
             if (str == null) return;
 
-            if ((getLength() + str.length()) <= 1) {
+            if ((getLength() + str.length()) <= 1 && Integer.parseInt(str) != 0) {
             	try {
             		Integer.parseInt(str);
             		super.insertString(offset, str, attr);
